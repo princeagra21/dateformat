@@ -41,6 +41,7 @@ dateformat(date , "dddd mm YYYY" , 'hi')
 Result :  return the date form in  passing format & passing language.
 
 Code: 
+
 dateformat(date , "My registration month mmmm and Year yyyy at hh the day was   -- dddd ")
 
 Result :  return date in custom format 
