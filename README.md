@@ -4,13 +4,21 @@ This is A Java Script library for to customise Date time format accordingly in m
 This is a very lightweight date format library with the purpose to help developers with Date customization. 
 
 YYYY : for Year in 4 digits
+
 YY: Year in last 2 digits
+
 mmmm : month Full Name
+
 mmm : Month short Name
+
 mm : Month in 2 digits
+
 dddd : Week Days full name
+
 ddd : week days short name
+
 dd : for the date in 2 digits
+
 hh : Time with AM & PM
 
 
