@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Format Library </title>
+    <script type="text/javascript" src="js/dateformat.js"></script>
+    <style type="text/css">
+        body{
+            padding: 10px;
+        }
+
+        table{
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+
+      table td{
+           min-width: 210px;
+           padding: 25px;
+        }
+    </style>
+</head>
+<body>
+    
+<h2> You can customize it with your own date format  </h2>
+
+<div> Default Format : <span id="result"></span> </div>
+<table>
+    
+<tr>  <th>Format</th> <th> code </th> <th> Result </th> </tr>
+
+
+    <tr>  
+        <td> <b> YYYY</b> : for Year in 4 digits <br> <b> YY</b>: Year in last 2 digits  <br> <b> mmmm  </b> : month Full Name <br> <b>mmm </b> : Month short Name <br> <b> mm </b> : Month in 2 digits <br> <b> dddd </b>: Week Days full name <br> <b> ddd </b> : week days short name <br> <b> dd </b> : for the date in 2 digits <br> <b>hh </b> : Time with AM & PM  </td>
+        
+        <td><code> dateformat(date , "YYYY") <br> dateformat(date , "YY") <br> dateformat(date , "mmmm") <br> dateformat(date , "mmm") <br> dateformat(date , "mm") <br> dateformat(date , "dddd") <br> dateformat(date , "ddd") <br> dateformat(date , "dd") <br> dateformat(date , "hh") 
+         </code> </td>
+
+        <td>    
+            <span id="YYYY">  </span> <br>
+            <span id="YY"> </span> <br>
+            <span id="mmmm"> </span> <br>
+            <span id="mmm"> </span><br>
+            <span id="mm"> </span> <br>
+            <span id="dddd"> </span> <br>
+            <span id="ddd"> </span> <br>
+            <span id="dd"> </span> <br>
+            <span id="hh"> </span> 
+         </td>
+    
+
+
+    </tr>
+
+
+
+ <tr> 
+
+    <td>  <b> customize your own format with any String (special character or join anything)  </b> <br>
+        like : My registration month July and Year 2022 at HH the day was **weekday** 
+
+
+    </td>
+
+    <td>  <code> dateformat(date , "My registration month mmmm and Year yyyy at hh the day was **dddd**")  </code> </td>
+
+    <td> <span id="customformat"> </span> </td>
+
+
+</tr>
+
+
+
+
+
+    <tr>  
+        <td> <strong> MMMM dd yyyy </strong> <br>MMMM : for the full name of month in Capital <br> dd: for number of month <br> yyyy: for 4 digit year print </td>
+        <td><code> dateformat(date , "MMMM dd yyyy") </code> </td>
+        <td id="format1">  </td>
+    </tr>
+
+
+    <tr>  
+        <td> <strong>dddd - mmmm dd yyyy </strong> <br>dddd : weekday in small latters <br> 
+            mmmm : month full name in small latters
+
+
+        </td>
+        <td><code> dateformat(date , "dddd - mmmm dd yyyy") </code> </td>
+        <td id="format2"> </td>
+    </tr>
+
+
+<tr> <td colspan="2"> <h2> Get Date in diffrent languages </h2> </td> </tr> 
+
+
+
+    <tr>  
+        <td> <strong>Just Pass Language code as 3rd argument </strong> 
+            <br> 'hi' , 'fa-IR' , 'ar-EG' etc.
+
+        </td>
+        <td><code> dateformat(date , "dddd - mmmm dd yyyy" , 'hi') </code> </td>
+        <td id="format3"> </td>
+    </tr>
+
+
+    <tr>  
+        <td> <strong>Print Date in Gujrati (language) 'gu' </strong> 
+            
+
+        </td>
+        <td><code> dateformat(date , "dd mmmm yyyy (dddd)" , 'gu') </code> </td>
+        <td id="format4"> </td>
+    </tr>
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    let date = new Date();
+
+
+ document.getElementById('result').innerText = dateformat(date);
+
+ document.getElementById('YYYY').innerText = dateformat(date , "YYYY");
+  document.getElementById('YY').innerText = dateformat(date , "YY");
+   document.getElementById('mmmm').innerText = dateformat(date , "mmmm");
+    document.getElementById('mmm').innerText = dateformat(date , "mmm");
+     document.getElementById('mm').innerText = dateformat(date , "mm");
+      document.getElementById('dddd').innerText = dateformat(date , "dddd");
+      document.getElementById('ddd').innerText = dateformat(date , "ddd");
+       document.getElementById('dd').innerText = dateformat(date , "dd");
+          document.getElementById('hh').innerText = dateformat(date , "hh");
+         
+
+         document.getElementById("customformat").innerText = dateformat(date , "My registration month mmmm and Year yyyy at hh the day was **dddd**");
+
+         document.getElementById("format1").innerText =  dateformat(date , "MMMM dd yyyy");
+        document.getElementById("format2").innerText =  dateformat(date , "dddd - mmmm dd yyyy");
+
+
+        document.getElementById("format3").innerText =  dateformat(date , "dddd - mmmm dd yyyy" , 'hi');
+
+
+        document.getElementById("format4").innerText =  dateformat(date , "dd mmmm yyyy (dddd)" , 'gu');
+        
+
+   
+
+</script>
+
+
+</body>
+</html>
